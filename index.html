@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5f0">
+  <title>flora. — цветы с любовью</title>
+  <meta name="description" content="Авторские букеты, свежие цветы и композиции от flora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="flora — главная">flora<span>.flower</span></a>
+    <p class="header-note">Цветы, которые говорят за вас</p>
+    <a class="header-contact" href="#contacts">Связаться<span>↗</span></a>
+  </header>
+
+  <!-- Плавающее меню -->
+  <div class="floating-menu">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menuPanel">
+      <span class="menu-icon"><span></span><span></span></span>
+    </button>
+    <nav class="menu-panel" id="menuPanel" aria-label="Основная навигация" inert>
+      <p class="menu-caption">МЕНЮ</p>
+      <div class="category-wrap">
+        <button class="category-toggle" id="categoryToggle" type="button" aria-expanded="false" aria-controls="categoryList">
+          <span>Цветы</span><span class="chevron">⌄</span>
+        </button>
+        <div class="category-list" id="categoryList" inert>
+          <div class="inner-container">
+            <button data-filter="all">Все букеты</button>
+            <button data-filter="roses">Розы</button>
+            <button data-filter="hrizantem">Хризантемы</button>
+            <button data-filter="tulips">Тюльпаны</button>
+            <button data-filter="author">Авторские</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="asortiment-wrap">
+        <button class="asortiment-toggle" id="asortimentToggle" type="button" aria-expanded="false" aria-controls="asortimentList">
+          <span>Стоимость</span><span class="chevron">⌄</span>
+        </button>
+        <div class="asortiment-list" id="asortimentList" inert>
+          <div class="inner-container">
+            <button data-filter="1500-2500">1 500 — 2 500 ₽</button>
+            <button data-filter="2500-3500">2 500 — 3 500 ₽</button>
+            <button data-filter="3500-5000">3 500 — 5 000 ₽</button>
+            <button data-filter="5000-7000">5 000 — 7 000 ₽</button>
+            <button data-filter="7000-10000">7 000 — 10 000 ₽</button>
+            <button data-filter="10000+">10 000+ ₽</button>
+          </div>
+        </div>
+      </div>
+
+
+      <a class="menu-link" href="#about">О нас <span>↗</span></a>
+      <a class="menu-link" href="#delivery">Доставка <span>↗</span></a>
+      <a class="menu-link" href="#contacts">Контакты <span>↗</span></a>
+
+    </nav>
+  </div>
+
+  <main>
+    <!-- Первый экран -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <h1>Цветы,<br>которые <em>чувствуют.</em></h1>
+        <p class="hero-description">Бережно собираем букеты, чтобы самые важные слова можно было сказать без слов.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#catalog">Выбрать букет <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="img/flower.jpg" alt="Нежный букет свежих цветов">
+      </div>
+    </section>
+
+    <!-- Каталог -->
+    <section class="catalog section" id="catalog">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">НАША КОЛЛЕКЦИЯ</p>
+        </div>
+        <p class="section-description">Каждый букет — маленькая история.<br>Выбери ту, которую хочется рассказать.</p>
+      </div>
+      
+      <div class="filters" role="group" aria-label="Фильтр букетов">
+        <button class="filter-button active" data-filter="all" aria-pressed="true">Все букеты</button>
+        <button class="filter-button" data-filter="roses" aria-pressed="false">Розы</button>
+        <button class="filter-button" data-filter="hrizantem" aria-pressed="false">Хризантемы</button>
+        <button class="filter-button" data-filter="tulips" aria-pressed="false">Тюльпаны</button>
+        <button class="filter-button" data-filter="author" aria-pressed="false">Авторские</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="hrizantem">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Blush">
+            <img src="img/белые и нежно-розовые кустовые хризантемы.jpg" alt="белые и нежно-розовые кустовые хризантемы" loading="lazy">
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>Хризантемы</h3><p>белые и нежно-розовые кустовые хризантемы</p></div>
+            <span class="price">2 495 ₽</span>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="author">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Peony">
+            <img src="img/белые розы, белые хризантемы, зелёные гвоздики и декоративные зелёные шарики.jpg" alt="белые розы, белые хризантемы, зелёные гвоздики и декоративные зелёные шарики" loading="lazy">
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>авторский букет</h3><p>белые розы, белые хризантемы, зелёные гвоздики</p></div>
+            <span class="price">6 600 ₽</span>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="roses">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Sunday">
+            <img src="img/белые розы.jpg" alt="белые розы" loading="lazy">
+            <span class="product-tag">НОВИНКА</span>
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>Букет белых роз</h3><p>белые розы</p></div>
+            <span class="price">3 600 ₽</span>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="roses">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Wild Soul">
+            <img src="img/оранжевые розы.jpg" alt="оранжевые розы" loading="lazy">
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>Букет роз</h3><p>оранжевые розы</p></div>
+            <span class="price">6 200 ₽</span>
+          </div>
+        </article>
+
+        <!----  <article class="product-card" data-category="roses">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Scarlet">
+            <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=85" alt="Красные розы" loading="lazy">
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>Scarlet</h3><p>Бархатные розы</p></div>
+            <span class="price">6 800 ₽</span>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="author">
+          <a class="product-image" href="#contacts" aria-label="Заказать букет Cloud">
+            <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=85" alt="Воздушная композиция из цветов" loading="lazy">
+            <span class="product-tag">LIMITED</span>
+            <span class="product-arrow">↗</span>
+          </a>
+          <div class="product-info">
+            <div><h3>Cloud</h3><p>Нежный авторский букет</p></div>
+            <span class="price">5 200 ₽</span>
+          </div>
+        </article>       --->  
+      </div>
+      <p class="catalog-note">Не нашли подходящий? <a href="#contacts">Создадим букет специально для вас ↗</a></p>
+    </section>
+
+
+    <!-- Контакты -->
+    <section class="contacts section" id="contacts">
+      <div class="contacts-copy">
+        <h2>Давай создадим<br>что-то <em>прекрасное.</em></h2>
+        <p>Расскажи, кого хочешь порадовать. Мы поможем подобрать идеальный букет.</p>
+        <a class="button button-light" href="https://instagram.com/astra_flower_base?mdxt=MTJpajB1Ym85ODFjaw%3D%3D" target="_blank" rel="noopener noreferrer">Написать нам <span>↗</span></a>
+
+      </div>
+
+      
+      <div class="contacts-details">
+
+        <div><span>МЫ В СОЦСЕТЯХ</span><a href="https://instagram.com/astra_flower_base?mdxt=MTJpajB1Ym85ODFjaw%3D%3D" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+
+        <div><span>ВРЕМЯ РАБОТЫ</span><p>Ежедневно  09:00–20:00</p></div>
+
+      </div>
+
+      <div class="contacts-decoration">f.</div>
+
+    </section>
+
+  </main>
+
+</html>
